@@ -8,8 +8,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "testbuild":"ng build --prod --base-href 'https://sebasg22.github.io/RobusRaffleWebApp/'"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {

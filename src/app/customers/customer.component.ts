@@ -63,6 +63,15 @@ export class CustomerComponent  {
     * Method: AddCustomerSubmit
     * @param customerForm 
     Recibe el formulario traido desde el template HTML, y parse los valores para su uso.
+    Paso seguido a que los valores del formulario son obtenidos, se crea un nuevo cliente basado
+    en el modelo de tipo de datos Customer.
+    Se suscribe al servicio addCostumer que basicamente genera un observable al generar una peticion
+    POST para almacenarlo en la base de datos.
+    Si no ocurre nigun error en la transaccion muestra un alerta de dialogo que dice cliente agregado correctamente.
+    Este metodo ademas limpia el formulario despues de generar el cliente.
+    @author Sebastian Guevara <rlxsebas@gmail.com>
+    @version 1.0.0
+    * Ultima Modificación:   07/26/2017 DD-MM-YYYY
     */ 
    addCustomerSubmit(customerForm: NgForm){
      console.log(customerForm.value);
@@ -76,6 +85,16 @@ export class CustomerComponent  {
     }); 
   }
 
+/**
+ * Method: removeCustomerSubmit
+ * @param customerForm 
+ * Este metodo recibe el formulario de eliminar usuario del template HTML y parsea los valores.
+ * Paso seguido d que los valores son obtenidos, se suscribe al servicio deleteCustomer el cual realiza
+ * una peticion delete para eliminar el usuario en la base de datos.
+ * Apenas se reciben los datos, se limpia el formulario.
+ * Cuando se elimine el usuario correctamente el usuario, se muestra una alerta de dialogoque confirma que
+ * el cliente fue eliminado correctamente.
+ */
   removeCustomerSubmit(customerForm: NgForm){
     console.log(customerForm.value);
     let customerId = customerForm.value.id; 
