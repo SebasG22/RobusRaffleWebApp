@@ -1,0 +1,41 @@
+<div class="container">
+    <h3 class="text-center" [hidden]="!mostrarGanador">El ganador del {{award}} es : <br>{{persona}}</h3>
+    <hr>
+    <h3 class="text-center" [hidden]='mostrarGanador'> Algunos de nuestros premios son:</h3>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem;">
+
+                <img class="card-img-top" src="../../assets/carro.jpg" class="img-responsive" alt="premio carro">
+                <div class="card-block">
+                    <h4 class="card-title">Carro 0 Kms</h4>
+                    <p class="card-text">Un espectacular carro 0 Kms para que viajes a donde quieras</p>
+                    <div class="text-center">
+                        <a class="btn blueBG" (click)="obtenerUnGanador('Carro 0 Kms')" [ngClass]="{disabled : deshabilitarBotones}">Sortear Premio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="../../assets/viaje.jpg" class="img-responsive" alt="premio carro">
+                <div class="card-block">
+                    <h4 class="card-title">Viaje a Eropa</h4>
+                    <p class="card-text">Un espectacular viaje para 2 personas al viejo continent</p>
+                    <a class="btn blueBG" (click)="obtenerUnGanador('Viaje a Europa')" [ngClass]="{disabled : deshabilitarBotones}">Sortear Premio</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="../../assets/cena.jpg" class="img-responsive" alt="premio carro">
+                <div class="card-block">
+                    <h4 class="card-title">Cena</h4>
+                    <p class="card-text">Un espectacular cena para 2 en el mejor restaurante de Bogotá</p>
+                    <a class="btn blueBG" (click)="obtenerUnGanador('Cena')" [ngClass]="{disabled : deshabilitarBotones}">Sortear Premio</a>
+                </div>
+            </div>
+        </div>
+    </div>

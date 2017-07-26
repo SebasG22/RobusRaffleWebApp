@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.yellowBG {
+    background-color: #FABE28;
+    color: white;
+}
+
+.blueBG {
+    background-color: #22A7F0;
+    color: white;
+}
