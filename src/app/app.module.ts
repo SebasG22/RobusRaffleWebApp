@@ -1,22 +1,31 @@
+import { CustomerComponent } from './customers/customer.component';
+import { CustomerService } from './customers/customer.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from "@angular/http";
+
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
-import { RaffleButtonComponent } from './raffle-button/raffle-button.component';
 import { AwardsComponent } from './awards/awards.component';
+
+import { FormsModule }   from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     JumbotronComponent,
-    RaffleButtonComponent,
-    AwardsComponent
+    AwardsComponent,
+    CustomerComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    FormsModule
+    
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
